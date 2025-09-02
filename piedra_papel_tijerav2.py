@@ -7,11 +7,12 @@ opciones = ["piedra", "papel", "tijera"]
 print("¡Bienvenido! Vamos a jugar a Piedra, Papel o Tijera.")
 print("Escribí tu jugada (piedra/papel/tijera).")
 
+total_rondas = 5
 ronda = 1
 puntos_usuario = 0
 puntos_pc = 0
 
-while ronda <= 3:
+while ronda <= total_rondas:
     print(f"\nRonda {ronda}")
     jugada_usuario = input("Tu jugada: ").strip().lower()
     if jugada_usuario not in opciones:
@@ -34,6 +35,13 @@ while ronda <= 3:
         print("Perdiste la ronda.")
         puntos_pc += 1
     ronda += 1
+    
+    if puntos_usuario > total_rondas // 2 and puntos_usuario > puntos_pc + (total_rondas - puntos_usuario):
+        print("Tenes una ventaja insuperable por la PC. Ganaste el juego")
+        break
+    if puntos_pc > total_rondas // 2 and puntos_pc > puntos_usuario + (total_rondas - puntos_pc):
+        print("La PC tiene una ventaja insuperable. Perdiste el juego")
+        break
 
 print("\n=== Resultado final ===")
 print(f"Tus puntos: {puntos_usuario} | Puntos de la PC: {puntos_pc}")
