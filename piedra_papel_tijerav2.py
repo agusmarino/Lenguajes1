@@ -18,7 +18,9 @@ while ronda <= total_rondas:
     if jugada_usuario not in opciones:
         print("Entrada no válida. Debe ser piedra, papel o tijera.")
         continue # no cuenta la ronda si la entrada es inválida
-
+    else:
+        print(f"Elegiste: {jugada_usuario}")
+        
     jugada_pc = random.choice(opciones)
     print(f"La computadora eligió: {jugada_pc}")
 
@@ -36,11 +38,13 @@ while ronda <= total_rondas:
         puntos_pc += 1
     ronda += 1
     
-    if puntos_usuario > total_rondas // 2 and puntos_usuario > puntos_pc + (total_rondas - puntos_usuario):
-        print("Tenes una ventaja insuperable por la PC. Ganaste el juego")
+    print(f"Puntos actuales .... vos: {puntos_usuario}, PC: {puntos_pc}")
+
+    if puntos_pc >= round((total_rondas + 0.5)/ 2) and ronda != total_rondas:
+        print("La pc ya no puede ser alcanzada. Fin del juego.")
         break
-    if puntos_pc > total_rondas // 2 and puntos_pc > puntos_usuario + (total_rondas - puntos_pc):
-        print("La PC tiene una ventaja insuperable. Perdiste el juego")
+    elif puntos_usuario > round(total_rondas / 2)and ronda != total_rondas:
+        print("Ya ganaste Fin del juego.")and i != total_rondas
         break
 
 print("\n=== Resultado final ===")
