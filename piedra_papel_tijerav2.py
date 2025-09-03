@@ -44,7 +44,7 @@ while ronda <= total_rondas:
         print("La pc ya no puede ser alcanzada. Fin del juego.")
         break
     elif puntos_usuario > round(total_rondas / 2)and ronda != total_rondas:
-        print("Ya ganaste Fin del juego.")and i != total_rondas
+        print("Ya ganaste Fin del juego.") and ronda != total_rondas
         break
 
 print("\n=== Resultado final ===")
