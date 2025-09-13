@@ -4,13 +4,6 @@
 #Escribir contar_vocales(cadena) que retorne un diccionario con la cuenta de cada vocal.
 #Escribir normalizar_palabras(frase) que retorne una lista de palabras sin signos de puntuación y en minúsculas.
 
-palabra = input("Escribir una palabra: ")
+palabra = input("ingrese una palabra: ")
 
-def palindormo():
-    for i, j in range (len(palabra)):
-        i + 1
-        j - 1
-        
-        if palabra[i] == palabra [j]:
-            return True
-    
+def es_palindromo(palabra):
