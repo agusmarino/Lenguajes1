@@ -1,5 +1,4 @@
 #Pedir dos listas de números (separados por espacios) y mostrar su intersección usando set.
-#Eliminar duplicados de una lista manteniendo el orden (pista: usar un set auxiliar para vistos).
 
 listaUsuario1 = []
 listaUsuario2 = []
@@ -27,6 +26,8 @@ print("interseccion de las listas: ", setLista1 & setLista2)
 
 ##########----------------------##############
 
+#Eliminar duplicados de una lista manteniendo el orden (pista: usar un set auxiliar para vistos).
+
 listaDuplicados = [1,1,2,3,3,3,4,2,5,1]
 
 vistos = set()
@@ -38,3 +39,4 @@ for x in listaDuplicados:
         vistos.add(x)
 
 print("lista sin duplicados: ", listaSinDuplicados)
+
