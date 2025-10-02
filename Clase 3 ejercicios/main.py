@@ -49,24 +49,6 @@ print(x)
 
 #pyhton una la variable global
 
-
-#ej 6
-import builtins
-
-printOG = builtins.print
-
-def printSobre(*args, **kwargs):
-    printOG("---",*args,"----")
-    
-builtins.print = printSobre
-
-print("hola")
-
-builtins.print = printOG
-
-print("hola")
-
-
 #ej 7
 def suma_total(*args):
     suma = 0
